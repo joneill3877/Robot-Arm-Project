@@ -2,8 +2,6 @@
 ## Programmable Multi-Axis Robot Arm
 By Luke Wylie and Joshua O'Neill Rossouw
 
-[Link to onshape](https://cvilleschools.onshape.com/documents/e30ffb94e8ba368b6e045edf/w/2e96059f558c7828030257d8/e/bc3dcf792d39e192dca5e8ad)
-
 ## Table of Contents
 1. [Planning](#planning)
   1. [Scope](#scope)
@@ -12,7 +10,9 @@ By Luke Wylie and Joshua O'Neill Rossouw
   4. [Bill of Materials](#bill-of-materials)
   5. [Pseudocode](#pseudocode)
 2. [Documentation](#documentation)
-   
+   1. [CAD](#cad)
+   2. [Code](#code)
+   3. [Wiring Diagram](#wiring-diagram)
 
 # Planning
 ## Scope
@@ -42,5 +42,12 @@ Week 8 (May 20-24)--------------: Finish documentation.
 ## Pseudocode
 
 # Documentation
+
+## CAD
+[Link to onshape](https://cvilleschools.onshape.com/documents/e30ffb94e8ba368b6e045edf/w/2e96059f558c7828030257d8/e/bc3dcf792d39e192dca5e8ad)
+
+## Code
+
+## Wiring Diagram
 
 
