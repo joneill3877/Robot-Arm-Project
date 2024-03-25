@@ -1,4 +1,5 @@
-# Robot-Arm-Project
+# Programmable Multi-Axis Robot Arm
+
 [Link to onshape](https://cvilleschools.onshape.com/documents/e30ffb94e8ba368b6e045edf/w/2e96059f558c7828030257d8/e/bc3dcf792d39e192dca5e8ad)
 
 # Scope
@@ -25,3 +26,7 @@ Week 8 (May 20-24)--------------: Finish documentation.
 # Bill Of Materials
 
 # Pseudocode
+
+# Authors and acknowledgment
+
+By Lucas Wylie and Joshua O'Neill Rossouw
