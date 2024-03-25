@@ -13,6 +13,9 @@ By Luke Wylie and Joshua O'Neill Rossouw
    1. [CAD](#cad)
    2. [Code](#code)
    3. [Wiring Diagram](#wiring-diagram)
+   4. [Evidence](#evidence)
+   5. [Reflective Schedule](#reflective-schedule)
+   6. [Reflection](#reflection)
 
 # Planning
 ## Scope
@@ -30,7 +33,7 @@ In this project, we will create a programmable robot arm that can record and loo
 | Week 7 (May 13-17) |  Test the functionality and start the documentation.  |
 | Week 8 (May 20-24) |  Finish the documentation.  |
 
-Note: This is a tentative schedule for illustrative purposes, and subject to change based numerous factor such as how the completion of different steps and when the official project due date. A reflective schedule will be included in the documentation and will be based on the timeframe in which steps are actually completed.
+Note: This is a tentative schedule for illustrative purposes, and subject to change based numerous factor such as how the completion of different steps and when the official project due date. 
 ## Diagrams
 <img src="20240325_164954.jpg" alt="Planning Diagram" width="400" height="500">
 
@@ -47,4 +50,19 @@ Note: This is a tentative schedule for illustrative purposes, and subject to cha
 
 ## Wiring Diagram
 
+## Evidence
+
+## Reflective Schedule
+| Week                        |  Goal                                                                                     |
+| :-------------------------: |  :-------------------------------------------------------------------------------------:
+| Week 1 (March 25-29) |  Finish planning document and CAD for the arm.  |
+| Week 2 (April 8-12)  |  Print the arm and start designing the controller.  |
+| Week 3 (April 15-19) |  Finish and print the controller.  |
+| Week 4 (April 22-26) |  Start assembling the arm and coding the arm control input.  |
+| Week 5 (April 29-May 3) |  Start assembling the controller and coding the record functionality.  |
+| Week 6 (May 6-10) |  Finish coding and assembling the project.  |
+| Week 7 (May 13-17) |  Test the functionality and start the documentation.  |
+| Week 8 (May 20-24) |  Finish the documentation.  |
+
+## Reflection
 
