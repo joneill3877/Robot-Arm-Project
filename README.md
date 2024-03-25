@@ -22,7 +22,7 @@ In this project, we will create a programmable robot arm that can record and loo
 | Week                        |  Goal                                                                                     |
 | :-------------------------: |  :-------------------------------------------------------------------------------------:
 | Week 1 (March 25-29) |  Finish planning document and CAD for the arm.  |
-| Week 2 (April 8-12)  |  Print arm CAD (making adjustments if needed) and start designing the controller.  |
+| Week 2 (April 8-12)  |  Print the arm and start designing the controller.  |
 | Week 3 (April 15-19) |  Finish and print the controller.  |
 | Week 4 (April 22-26) |  Start assembling the arm and coding the arm control input.  |
 | Week 5 (April 29-May 3) |  Start assembling the controller and coding the record functionality.  |
