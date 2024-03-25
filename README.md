@@ -23,7 +23,7 @@ In this project, we will create a programmable robot arm that can record and loo
 
 ## Schedule
 | Week                        |  Goal                                                                                     |
-| :-------------------------: |  :-------------------------------------------------------------------------------------:
+| :-------------------------: |  :-------------------------------------------------------------------------------------:  |
 | Week 1 (March 25-29) |  Finish planning document and CAD for the arm.  |
 | Week 2 (April 8-12)  |  Print the arm and start designing the controller.  |
 | Week 3 (April 15-19) |  Finish and print the controller.  |
@@ -38,6 +38,11 @@ Note: This is a tentative schedule for illustrative purposes, and subject to cha
 <img src="20240325_164954.jpg" alt="Planning Diagram" width="400" height="500">
 
 ## Bill Of Materials
+|  Name  |  Description  |  Quantity  |
+| :----: | :-----------: | :--------: |
+
+		
+		
 
 ## Pseudocode
 
