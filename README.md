@@ -31,7 +31,7 @@ Week 7 (May 13-17)--------------: Test the functionality of the project and star
 
 Week 8 (May 20-24)--------------: Finish documentation.
 ## Diagrams
-![](20240325_164954.jpg)
+<img src="20240325_164954.jpg" alt="Planning Diagram" width="400" height="500">
 
 ## Bill Of Materials
 
