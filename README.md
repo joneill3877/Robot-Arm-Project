@@ -21,7 +21,7 @@ Week 7 (May 13-17)--------------: Test the functionality of the project and star
 
 Week 8 (May 20-24)--------------: Finish documentation.
 # Diagrams
-
+![](20240325_164954.jpg)
 # Bill Of Materials
 
 # Pseudocode
