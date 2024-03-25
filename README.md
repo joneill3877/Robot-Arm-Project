@@ -230,6 +230,11 @@ while True:
 
 ## Evidence
 
+https://github.com/SempronChip/engr3/assets/143545309/e74b0bae-ce39-4a23-b4f0-3eb728cfd7ae
+
+Credit goes to 
+[Gaby D.](https://github.com/gdaless20/Circuitpython)
+
 ## Reflective Schedule
 | Week                        |  Goal                                                                                     |
 | :-------------------------: |  :-------------------------------------------------------------------------------------:
