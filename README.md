@@ -29,6 +29,7 @@ In this project, we will create a programmable robot arm that can record and loo
 | Week 6 (May 6-10) |  Finish code for the project and assembly.  |
 | Week 7 (May 13-17) |  Test the functionality of the project and start the documentation.  |
 | Week 8 (May 20-24) |  Finish documentation.  |
+
 Note: This is a tentative schedule for illustrative purposes, and subject to change based numerous factor such as how the completion of different steps and when the official project due date. A reflective schedule will be included in the documentation and will be based on the timeframe in which steps are actually completed.
 ## Diagrams
 <img src="20240325_164954.jpg" alt="Planning Diagram" width="400" height="500">
