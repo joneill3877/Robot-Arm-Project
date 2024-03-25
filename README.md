@@ -4,11 +4,11 @@ By Luke Wylie and Joshua O'Neill Rossouw
 
 ## Table of Contents
 1. [Planning](#planning)
-  1. [Scope](#scope)
-  2. [Schedule](#schedule)
-  3. [Diagrams](#diagrams)
-  4. [Bill of Materials](#bill-of-materials)
-  5. [Pseudocode](#pseudocode)
+   1. [Scope](#scope)
+   2. [Schedule](#schedule)
+   3. [Diagrams](#diagrams)
+   4. [Bill of Materials](#bill-of-materials)
+   5. [Pseudocode](#pseudocode)
 2. [Documentation](#documentation)
    1. [CAD](#cad)
    2. [Code](#code)
