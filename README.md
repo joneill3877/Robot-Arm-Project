@@ -40,11 +40,17 @@ Note: This is a tentative schedule for illustrative purposes, and subject to cha
 ## Bill Of Materials
 |  Name  |  Description  |  Quantity  |
 | :----: | :-----------: | :--------: |
+| Nema 17 | Stepper Motor | 5 |
+| Metro M4 Airlift | Microcontroller Board | 1 |
 
 		
 		
 
 ## Pseudocode
+
+```
+
+```
 
 # Documentation
 
@@ -52,6 +58,10 @@ Note: This is a tentative schedule for illustrative purposes, and subject to cha
 [Link to onshape](https://cvilleschools.onshape.com/documents/e30ffb94e8ba368b6e045edf/w/2e96059f558c7828030257d8/e/bc3dcf792d39e192dca5e8ad)
 
 ## Code
+
+```
+
+```
 
 ## Wiring Diagram
 
