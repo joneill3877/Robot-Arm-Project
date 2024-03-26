@@ -19,7 +19,7 @@ By Luke Wylie and Joshua O'Neill Rossouw
 
 # Planning
 ## Scope
-In this project, we will create a programmable robot arm that can record and loop user inputs to repeat the movements necessary to complete a specific task. The base will be able to clamp onto a surface to stabilize the arm and provide an axis of rotation for the arm. The arm will be constructed out of three hinge joints one connecting the arm base to the first arm segment, the second between the first and second arm segments, and the third between the second arm joint and the claw assembly. The claw comprises four individual blades centered around a central worm gear, which is actuated by a motor, which rotates the blades. A user input device, tethered by a heat-shrunk length of wires, will send inputs to the arm. The inputs on the control device will be a joystick for the axial movements of the joints, a button that switches the joystick to controlling the claw when pressed once and switches back to controlling the arm when pressed again, a button that starts and stops the recording of the inputs, and a button which accesses the menu on the readout LCD. The readout LCD will also be located on the control device and will display pertinent information regarding the movement of the arm.
+In this project, we will create a programmable robot arm to record and loop user inputs to repeat the movements necessary to complete a specific task. The base will be able to clamp onto a surface to stabilize the arm and provide an axis of rotation for the arm. The arm will be constructed out of three hinge joints one connecting the arm base to the first arm segment, the second between the first and second arm segments, and the third between the second arm joint and the claw assembly. The claw comprises four individual blades centered around a central worm gear, which is actuated by a motor, which rotates the blades. A user input device, tethered by a heat-shrunk length of wires, will send inputs to the arm. The inputs on the control device will be a joystick for the axial movements of the joints, a button that switches the joystick to controlling the claw when pressed once and switches back to controlling the arm when pressed again, a button that starts and stops the recording of the inputs, and a button which accesses the menu on the readout LCD. The readout LCD will also be located on the control device and will display pertinent information regarding the movement of the arm.
 
 ## Schedule
 | Week                        |  Goal                                                                                     |
@@ -33,7 +33,7 @@ In this project, we will create a programmable robot arm that can record and loo
 | Week 7 (May 13-17) |  Test the functionality and start the documentation.  |
 | Week 8 (May 20-24) |  Finish the documentation.  |
 
-Note: This is a tentative schedule for illustrative purposes, and subject to change based numerous factor such as how the completion of different steps and when the official project due date. 
+Note: This is a tentative schedule for illustrative purposes, and is subject to change based on numerous factors such as the completion of different steps and when the official project due date. 
 ## Diagrams
 <img src="20240325_164954.jpg" alt="Planning Diagram" width="400" height="500">
 
@@ -48,7 +48,36 @@ Note: This is a tentative schedule for illustrative purposes, and subject to cha
 
 ## Pseudocode
 
-```python
+```
+Setup motors
+Setup analog stick
+Setup LCD
+Define variables
+Define states
+Define Menus
+While the analog stick is moved and in the arm state:
+Move the arm motors this way
+Print the movement to the LCD
+When the analog stick button is pressed:
+Change state
+Print state change to the LCD
+While the analog stick is moved and in the claw state:
+Move the claw motors this way
+Print the movement to the LCD
+When the record button is pressed and the record is OFF:
+Change record to ON
+Print the record ON to the LCD
+While the record is ON:
+Save the movements the arm makes and state changes
+If the record button is pressed again stop recording
+When play is pressed
+Play the saved movements
+When the menu is opened:
+Print to LCD the menu item
+When the analog stick is moved on the menu:
+Move to the next menu item
+When play is pressed on the menu:
+Run the menu item's corresponding function
 ```
 
 
