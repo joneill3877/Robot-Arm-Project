@@ -42,7 +42,17 @@ Note: This is a tentative schedule for illustrative purposes, and is subject to 
 | :----: | :-----------: | :--------: |
 | Nema 17 | Stepper Motor | 5 |
 | Metro M4 Airlift | Microcontroller Board | 1 |
-
+| T-slot Aluminium Extrusion | 20 x 20 x 510 | 2 |
+| Base | 3D Printed | 1 |
+| Base Joint | 3D Printed | 1 |
+| Female Arm Joint | 3D Printed | 2 |
+| Male Arm Joint | 3D Printed | 2 |
+| Claw Base | 3D Printed | 1 |
+| Claw Main Screw Gear | 3D Printed | 1 |
+| Claw Globoid Gear | 3D Printed | 4 |
+| Claw | 3D Printed | 4 |
+| Claw Shaft | 3D Printed | 4 |
+| Claw Spacer | 3D Printed | 8 |
 		
 		
 
