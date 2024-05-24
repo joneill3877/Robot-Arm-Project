@@ -1,31 +1,62 @@
 import time
 import board
 from digitalio import DigitalInOut, Direction, Pull
-from analogio import AnalogIn
+import analogio 
 from lcd import LCD
 from i2c_pcf8574_interface import I2CPCF8574Interface
+import adafruit_74hc595
 
-ax = AnalogIn(board.A13)
-ay = AnalogIn(board.A12)
-btn = DigitalInOut(board.A11)
+latch_pin = digitalio.DigitalInOut(board.D0)
+sr = adafruit_74hc595.ShiftRegister74HC595(board.SPI(), latch_pin)
+pins = [sr.get_pin(n) for n in range(9)]
+btn = DigitalInOut(pins[8])
 btn.direction = Direction.INPUT
 btn.pull = Pull.UP
+ax = analogio.AnalogIn(board.A0)
+ay = analogio.AnalogIn(board.A1)
+pot_min = 0.00
+pot_max = 3.29
+step = (pot_max - pot_min) / 20.0
+analog_direction = ""
 state = 0
 i2c = board.I2C()
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
 last_position = 0
 position = 1
-joystick_direction = "none"
 
-def analog_direction:
-  x = map_range(ax, 0, 65535, -1, 1)
-  y = map_range(ay, 0, 65535, -1, 1)
-  if x >= 0 and y 
+def get_voltage(pin):
+    return (pin.value * 3.3) / 65536
+
+
+def steps(axis):
+    return round((axis - pot_min) / step)
+
 while True:
-
-
-  if not btn.value:
-    print("BTN is down")
-    state = 1
-  time.sleep(0.1) 
-
+    lcd.clear()
+    x = steps(get_voltage(ax))
+    y = steps(get_voltage(ay))
+    if (x == 10 and y == 10):
+        analog_direction = "null"
+    if (x == 10 and y == 0):
+        analog_direction = "N"
+    if (x == 20 and y == 10):
+        analog_direction = "E"
+    if (x == 0 and y == 10):
+        analog_direction = "W"
+    if (x == 10 and y == 20):
+        analog_direction = "S"
+    if (x == 20 and y == 0):
+        analog_direction = "NE"
+    if (x == 0 and y == 0):
+        analog_direction = "NW"
+    if (x == 0 and y == 20):
+        analog_direction = "SW"
+    if (x == 20 and y == 20):
+        analog_direction = "SE"
+    if not btn.value:
+        lcd.set_cursor_pos(1, 0)
+        lcd.print("BTN is down")
+        state = 1    
+    lcd.set_cursor_pos(0, 0)
+    lcd.print(analog_direction)
+    time.sleep(.1)
