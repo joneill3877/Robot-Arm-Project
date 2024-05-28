@@ -212,7 +212,7 @@ def run_reset():
     lcd.set_cursor_pos(0, 0)
     lcd.print("Reset")
 
-def run_calibrate):
+def run_calibrate():
     lcd.clear()
     lcd.set_cursor_pos(0, 0)
     lcd.print("Calibrate")
