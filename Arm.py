@@ -166,41 +166,35 @@ def run_move_claw():
     lcd.print("Move Claw")
     lcd.set_cursor_pos(1, 0)
     if analog_direction == "N":
-        # M1 +
-        # M2 -
+        # M4 -
         claw_rot = "+"
     if analog_direction == "S":
-        # M1 -
-        # M2 +
+        # M4 +
         claw_rot = "-"
     if analog_direction == "E":
-        # M3 +
+        # M5 +
         claw_open = "+"
     if analog_direction == "W":
-        # M3 -
+        # M5 -
         claw_open = "-"
     if analog_direction == "NE":
-        # M1 -
-        # M2 +
-        # M3 +
+        # M4 -
+        # M5 +
         claw_rot = "+"
         claw_open = "+"
     if analog_direction == "NW":
-        # M1 -
-        # M2 +
-        # M3 -
+        # M4 -
+        # M5 -
         claw_rot = "-"
         claw_open = "+"
     if analog_direction == "SE":
-        # M1 +
-        # M2 -
-        # M3 +
+        # M4 +
+        # M5 +
         claw_rot = "+"
         claw_open = "-"
     if analog_direction == "SW":
-        # M1 +
-        # M2 -
-        # M3 -
+        # M4 +
+        # M5 -
         claw_rot = "-"
         claw_open = "-"
     if state == 1:
