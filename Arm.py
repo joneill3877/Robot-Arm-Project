@@ -3,13 +3,17 @@ import board
 from digitalio import DigitalInOut, Direction, Pull
 import analogio 
 from lcd import LCD
+import busio
 from i2c_pcf8574_interface import I2CPCF8574Interface
 import adafruit_74hc595
+from adafruit_motor import stepper
+import asyncio
 
-latch_pin = digitalio.DigitalInOut(board.D0)
-sr = adafruit_74hc595.ShiftRegister74HC595(board.SPI(), latch_pin)
-pins = [sr.get_pin(n) for n in range(9)]
-btn = DigitalInOut(pins[8])
+spi = busio.SPI(board.SCK, MOSI=board.MOSI)
+latch_pin = DigitalInOut(board.D0)
+sr = adafruit_74hc595.ShiftRegister74HC595(spi, latch_pin)
+pins = [sr.get_pin(n) for n in range(8)]
+btn = DigitalInOut(board.D11)
 btn.direction = Direction.INPUT
 btn.pull = Pull.UP
 ax = analogio.AnalogIn(board.A0)
@@ -23,6 +27,14 @@ i2c = board.I2C()
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
 last_position = 0
 position = 1
+DELAY = 0.01  
+STEPS = 100
+coilsM1 = (
+    digitalio.DigitalInOut(board.D9),   # A1
+    digitalio.DigitalInOut(board.D10),  # A2
+    digitalio.DigitalInOut(board.D11),  # B1
+    digitalio.DigitalInOut(board.D12),  # B2
+)
 
 def get_voltage(pin):
     return (pin.value * 3.3) / 65536
@@ -53,7 +65,7 @@ while True:
         analog_direction = "SW"
     if (x == 20 and y == 20):
         analog_direction = "SE"
-    if not btn.value:
+    if btn.value == False:
         lcd.set_cursor_pos(1, 0)
         lcd.print("BTN is down")
         state = 1    
