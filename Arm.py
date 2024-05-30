@@ -157,45 +157,49 @@ while True:
         lcd.print("Move Arm")
         lcd.set_cursor_pos(1, 0)
         if analog_direction() == "N":
-            motorM1.onestep(style=stepper.DOUBLE)
+            motorM2.onestep(style=stepper.DOUBLE)
             motorM1.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             time.sleep(.01)
             arm_dirY = "+Y"
-            print("moved up")
         if analog_direction() == "S":
             motorM1.onestep(style=stepper.DOUBLE)
             motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             time.sleep(.01)
             arm_dirY = "-Y"
-            
         if analog_direction() == "E":
-            # M3 +
+            motorM3.onestep(style=stepper.DOUBLE)
+            time.sleep(.01)
             arm_dirX = "+X"
         if analog_direction() == "W":
-            # M3 -
+            motorM3.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            time.sleep(.01)
             arm_dirX = "-X"
         if analog_direction() == "NE":
-            # M1 -
-            # M2 +
-            # M3 +
+            motorM2.onestep(style=stepper.DOUBLE)
+            motorM1.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            motorM3.onestep(style=stepper.DOUBLE)
+            time.sleep(.01)
             arm_dirX = "+X"
             arm_dirY = "+Y"
         if analog_direction() == "NW":
-            # M1 -
-            # M2 +
-            # M3 -
+            motorM1.onestep(style=stepper.DOUBLE)
+            motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            motorM3.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            time.sleep(.01)
             arm_dirX = "-X"
             arm_dirY = "+Y"
         if analog_direction() == "SE":
-            # M1 +
-            # M2 -
-            # M3 +
+            motorM1.onestep(style=stepper.DOUBLE)
+            motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            motorM3.onestep(style=stepper.DOUBLE)
+            time.sleep(.01)
             arm_dirX = "+X"
             arm_dirY = "-Y"
         if analog_direction() == "SW":
-            # M1 +
-            # M2 -
-            # M3 -
+            motorM1.onestep(style=stepper.DOUBLE)
+            motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            motorM3.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            time.sleep(.01)
             arm_dirX = "-X"
             arm_dirY = "-Y"
         lcd.print(arm_dirX + ", " + arm_dirY)
@@ -210,35 +214,35 @@ while True:
         lcd.print("Move Claw")
         lcd.set_cursor_pos(1, 0)
         if analog_direction() == "N":
-            # M4 -
+            motorM4.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             claw_rot = "+"
         if analog_direction() == "S":
-            # M4 +
+            motorM4.onestep(style=stepper.DOUBLE)
             claw_rot = "-"
         if analog_direction() == "E":
-            # M5 +
+            motorM5.onestep(style=stepper.DOUBLE)
             claw_open = "+"
         if analog_direction() == "W":
-            # M5 -
+            motorM5.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             claw_open = "-"
         if analog_direction() == "NE":
-            # M4 -
-            # M5 +
+            motorM4.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            motorM5.onestep(style=stepper.DOUBLE)
             claw_rot = "+"
             claw_open = "+"
         if analog_direction() == "NW":
-            # M4 -
-            # M5 -
+            motorM4.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+            motorM5.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             claw_rot = "-"
             claw_open = "+"
         if analog_direction() == "SE":
-            # M4 +
-            # M5 +
+            motorM4.onestep(style=stepper.DOUBLE)
+            motorM5.onestep(style=stepper.DOUBLE)
             claw_rot = "+"
             claw_open = "-"
         if analog_direction() == "SW":
-            # M4 +
-            # M5 -
+            motorM4.onestep(style=stepper.DOUBLE)
+            motorM5.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             claw_rot = "-"
             claw_open = "-"
         lcd.print(claw_rot + ", " + claw_open)
