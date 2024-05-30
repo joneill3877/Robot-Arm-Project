@@ -60,25 +60,24 @@ arm_dirX = ""
 arm_dirY = ""
 
 def analog_direction():
-    if x == 10 and y == 10:
-        Adir = "null"
-    if x == 10 and y == 0:
-        Adir = "N"
-    if x == 20 and y == 10:
-        Adir = "E"
-    if x == 0 and y == 10:
-        Adir = "W"
-    if x == 10 and y == 20:
-        Adir = "S"
-    if x == 20 and y == 0:
-        Adir = "NE"
-    if x == 0 and y == 0:
-        Adir = "NW"
-    if x == 0 and y == 20:
-        Adir = "SW"
-    if x == 20 and y == 20:
-        Adir = "SE"
-    return Adir
+    if x <= 11 and x >= 9 and y <= 11 and y >= 9:
+        return str("null")
+    elif x >= 9 and x <= 11 and y == 0:
+        return str("N")
+    elif x == 20 and y == 10:
+        return str("E")
+    elif x == 0 and y == 10:
+        return str("W")
+    elif x == 10 and y == 20:
+        return str("S")
+    elif x == 20 and y == 0:
+        return str("NE")
+    elif x == 0 and y == 0:
+        return str("NW")
+    elif x <= 3 and y == 20:
+        return str("SW")
+    elif x == 20 and y == 20:
+        return str("SE")
 
 def get_voltage(pin):
     return (pin.value * 3.3) / 65536
@@ -100,6 +99,7 @@ while True:
     lcd.clear()
     x = steps(get_voltage(ax))
     y = steps(get_voltage(ay))
+    print(x, y)
     if mode == "menu":
         if analog_direction() == "E":
             if menu_pos < 4:
@@ -157,16 +157,18 @@ while True:
         lcd.print("Move Arm")
         lcd.set_cursor_pos(1, 0)
         if analog_direction() == "N":
-            motorM1.onestep(direction=stepper.BACKWARD)
-            arm_dirY = "+Y"
+            motorM1.onestep(style=stepper.DOUBLE)
+            motorM1.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             time.sleep(.01)
+            arm_dirY = "+Y"
             print("moved up")
         if analog_direction() == "S":
-            motorM2.onestep(style=stepper.DOUBLE)
-            motorM1.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
-            arm_dirY = "-Y"
+            motorM1.onestep(style=stepper.DOUBLE)
+            motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             time.sleep(.01)
-        while analog_direction() == "E":
+            arm_dirY = "-Y"
+            
+        if analog_direction() == "E":
             # M3 +
             arm_dirX = "+X"
         if analog_direction() == "W":
