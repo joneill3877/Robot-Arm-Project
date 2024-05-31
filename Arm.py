@@ -61,6 +61,7 @@ clawOpen = 0
 menu_pos = 0
 arm_dirX = ""
 arm_dirY = ""
+aDir = "null"
 rbtn = DigitalInOut(board.A4)
 rbtn.direction = Direction.INPUT
 rbtn.pull = Pull.UP
@@ -70,15 +71,15 @@ mbtn.pull = Pull.UP
 def analog_direction():
     if x <= 11 and x >= 9 and y <= 11 and y >= 9:
         return str("null")
-    elif x >= 9 and x <= 11 and y == 0:
+    elif x >= 9 and x <= 11 and y >= 0 and y <=2:
         return str("N")
-    elif x == 20 and y == 10:
+    elif x == 20 and y >= 9 and y <=11:
         return str("E")
-    elif x == 0 and y == 10:
+    elif x >= 0 and x <= 2 and y >= 9 and y <= 11:
         return str("W")
-    elif x == 10 and y == 20:
+    elif x >= 9 and x <= 11 and y == 20:
         return str("S")
-    elif x == 20 and y == 0:
+    elif x == 20 and y >= 0 and y <= 2:
         return str("NE")
     elif x == 0 and y == 0:
         return str("NW")
@@ -93,58 +94,48 @@ def get_voltage(pin):
 def steps(axis):
     return round((axis - pot_min) / step)
 
-def run_reset():
-    
-
-def run_calibrate():
-    
 
 while True:
-    lcd.clear()
     x = steps(get_voltage(ax))
     y = steps(get_voltage(ay))
     print(x, y)
     if mode == "menu":
+        lcd.clear()
         if analog_direction() == "E":
             if menu_pos < 5:
                 menu_pos += 1
-            if menu_pos >= 4:
+            if menu_pos >= 5:
                 menu_pos = 0
             if menu_pos < 0:
                 menu_pos = 4
         if analog_direction() == "W":
             if menu_pos < 5:
                 menu_pos -= 1
-            if menu_pos >= 4:
+            if menu_pos >= 5:
                 menu_pos = 0
             if menu_pos < 0:
                 menu_pos = 4     
         if menu_pos == 0:
-            lcd.clear()
             lcd.set_cursor_pos(0, 0)
             lcd.print("Menu")
             lcd.set_cursor_pos(1, 0)
             lcd.print("Move Arm")
         elif menu_pos == 1:
-            lcd.clear()
             lcd.set_cursor_pos(0, 0)
             lcd.print("Menu")
             lcd.set_cursor_pos(1, 0)
             lcd.print("Move Claw")
         elif menu_pos == 2:
-            lcd.clear()
             lcd.set_cursor_pos(0, 0)
             lcd.print("Menu")
             lcd.set_cursor_pos(1, 0)
             lcd.print("Reset")
         elif menu_pos == 3:
-            lcd.clear()
             lcd.set_cursor_pos(0, 0)
             lcd.print("Menu")
             lcd.set_cursor_pos(1, 0)
             lcd.print("Calibrate")
         elif menu_pos == 4:
-            lcd.clear()
             lcd.set_cursor_pos(0, 0)
             lcd.print("Menu")
             lcd.set_cursor_pos(1, 0)
@@ -161,7 +152,9 @@ while True:
             elif menu_pos == 4:
                 mode = "play"
             state = 0
+        time.sleep(.1)
     if mode == "arm":
+        aDir = analog_direction()
         arm_dirX = ""
         arm_dirY = ""
         lcd.clear()
@@ -171,26 +164,22 @@ while True:
         if analog_direction() == "N":
             motorM2.onestep(style=stepper.DOUBLE)
             motorM1.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirY = "+Y"
             if recordingNow == True:
                 recording.append("AN")
         if analog_direction() == "S":
             motorM1.onestep(style=stepper.DOUBLE)
             motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirY = "-Y"
             if recordingNow == True:
                 recording.append("AS")
         if analog_direction() == "E":
             motorM3.onestep(style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirX = "+X"
             if recordingNow == True:
-                recording.append("AE")
+                recording.append("AE")   
         if analog_direction() == "W":
             motorM3.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirX = "-X"
             if recordingNow == True:
                 recording.append("AW")
@@ -198,7 +187,6 @@ while True:
             motorM2.onestep(style=stepper.DOUBLE)
             motorM1.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             motorM3.onestep(style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirX = "+X"
             arm_dirY = "+Y"
             if recordingNow == True:
@@ -207,7 +195,6 @@ while True:
             motorM1.onestep(style=stepper.DOUBLE)
             motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             motorM3.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirX = "-X"
             arm_dirY = "+Y"
             if recordingNow == True:
@@ -216,7 +203,6 @@ while True:
             motorM1.onestep(style=stepper.DOUBLE)
             motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             motorM3.onestep(style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirX = "+X"
             arm_dirY = "-Y"
             if recordingNow == True:
@@ -225,7 +211,6 @@ while True:
             motorM1.onestep(style=stepper.DOUBLE)
             motorM2.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
             motorM3.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
-            time.sleep(.01)
             arm_dirX = "-X"
             arm_dirY = "-Y"
             if recordingNow == True:
@@ -234,6 +219,7 @@ while True:
         if state == 1:
             mode = "menu"
             state = 0
+            time.sleep(1)
         if switchState == 1:
             mode = "arm"
             switchState = 0
@@ -323,4 +309,4 @@ while True:
         state = 1
     elif mbtn.value == True:
         state = 0
-    time.sleep(.01)
+    
