@@ -1,4 +1,4 @@
-# 23/24 Engeering 4 Robot Arm Project 
+x# 23/24 Engeering 4 Robot Arm Project 
 ## Programmable Multi-Axis Robot Arm
 By Luke Wylie and Joshua O'Neill Rossouw
 
@@ -520,14 +520,14 @@ while True:
 ## Reflective Schedule
 | Week                        |  Goal                                                                                     |
 | :-------------------------: |  :-------------------------------------------------------------------------------------:
-| Week 1 (March 25-29) |  Finish planning document and CAD for the arm.  |
-| Week 2 (April 8-12)  |  Print the arm and start designing the controller.  |
-| Week 3 (April 15-19) |  Finish and print the controller.  |
-| Week 4 (April 22-26) |  Start assembling the arm and coding the arm control input.  |
-| Week 5 (April 29-May 3) |  Start assembling the controller and coding the record functionality.  |
-| Week 6 (May 6-10) |  Finish coding and assembling the project.  |
-| Week 7 (May 13-17) |  Test the functionality and start the documentation.  |
-| Week 8 (May 20-24) |  Finished the documentation.  |
+| Week 1 (March 25-29) |  Finished arm CAD  |
+| Week 2 (April 8-12)  |  Designed the controller.  |
+| Week 3 (April 15-19) |  Printed Arm and redesigned the joint.  |
+| Week 4 (April 22-26) |  Fixed problems with the arm.  |
+| Week 5 (April 29-May 3) |  Assembled the controller and coded.  |
+| Week 6 (May 6-10) |  Coded and assembled the project.  |
+| Week 7 (May 13-17) |  Finished code and printed.  |
+| Week 8 (May 20-24) |  Finished the documentation, printed, and assembled.  |
 
 ## Reflection
 
