@@ -104,7 +104,7 @@ Run the menu item's corresponding function
 
 ## Wiring Diagram
 
-
+![](Capture.PNG)
 
 ## Evidence
 
@@ -120,7 +120,7 @@ Run the menu item's corresponding function
 | Week 5 (April 29-May 3) |  Start assembling the controller and coding the record functionality.  |
 | Week 6 (May 6-10) |  Finish coding and assembling the project.  |
 | Week 7 (May 13-17) |  Test the functionality and start the documentation.  |
-| Week 8 (May 20-24) |  Finish the documentation.  |
+| Week 8 (May 20-24) |  Finished the documentation.  |
 
 ## Reflection
 
