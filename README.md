@@ -1,4 +1,4 @@
-x# 23/24 Engeering 4 Robot Arm Project 
+# 23/24 Engeering 4 Robot Arm Project 
 ## Programmable Multi-Axis Robot Arm
 By Luke Wylie and Joshua O'Neill Rossouw
 
@@ -109,6 +109,7 @@ Run the menu item's corresponding function
 <img width="729" alt="Screenshot 2024-06-03 at 9 26 49 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/65ec391e-f2be-41fa-937c-748bc19c2165">
 
 <img width="341" alt="Screenshot 2024-06-03 at 9 26 21 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/17a7a989-e7a1-4f95-852f-a130296283d0">
+
 ## Code
 
 ```python
