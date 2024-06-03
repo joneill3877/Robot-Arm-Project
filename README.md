@@ -113,6 +113,7 @@ Run the menu item's corresponding function
 ## Code
 
 ```python
+# Import modules
 import time
 import board
 from digitalio import DigitalInOut, Direction, Pull
@@ -123,7 +124,7 @@ from i2c_pcf8574_interface import I2CPCF8574Interface
 import adafruit_74hc595
 from adafruit_motor import stepper
 
-
+# Initialize variables
 spi = busio.SPI(board.SCK, MOSI=board.MOSI)
 latch_pin = DigitalInOut(board.D0)
 sr = adafruit_74hc595.ShiftRegister74HC595(spi, latch_pin)
@@ -183,6 +184,8 @@ rbtn.pull = Pull.UP
 mbtn = DigitalInOut(board.A5)
 mbtn.direction = Direction.INPUT
 mbtn.pull = Pull.UP
+
+# Get directions from analog stick
 def analog_direction():
     if x <= 11 and x >= 9 and y <= 11 and y >= 9:
         return str("null")
@@ -214,6 +217,7 @@ while True:
     x = steps(get_voltage(ax))
     y = steps(get_voltage(ay))
     print(x, y)
+# Displays menu and cycles through items
     if mode == "menu":
         lcd.clear()
         if analog_direction() == "E":
@@ -268,6 +272,7 @@ while True:
                 mode = "play"
             state = 0
         time.sleep(.1)
+# Moves arm joint motors
     if mode == "arm":
         aDir = analog_direction()
         arm_dirX = ""
@@ -341,6 +346,7 @@ while True:
         if switchState == 1:
             mode = "arm"
             switchState = 0
+# Moves claw joint motor and the claw actuation motor
     if mode == "claw":
         claw_rot = ""
         claw_open = ""
@@ -407,6 +413,7 @@ while True:
         if switchState == 1:
             mode = "claw"
             switchState = 0
+# Resets recording
     if mode == "reset":
         lcd.clear()
         lcd.set_cursor_pos(0, 0)
@@ -415,7 +422,8 @@ while True:
         if state == 1:
                 mode = "menu"
                 state = 0
-                time.sleep(1)   
+                time.sleep(1)
+# Calibration function, hold over from testing   
     if mode == "calibrate":
         lcd.clear()
         lcd.set_cursor_pos(0, 0)
@@ -423,7 +431,8 @@ while True:
         if state == 1:
                 mode = "menu"
                 state = 0
-                time.sleep(1)   
+                time.sleep(1)
+# Plays the recording   
     if mode == "play":
         lcd.clear()
         lcd.set_cursor_pos(0, 0)
@@ -501,7 +510,8 @@ while True:
         if state == 1:
             mode = "menu"
             state = 0
-            time.sleep(1)               
+            time.sleep(1)
+# Handles button states               
     if btn.value == False:
         switchState = 1
     elif btn.value == True:
