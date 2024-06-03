@@ -535,11 +535,12 @@ while True:
 
 ## Wiring Diagram
 
-![](Capture.PNG)
+
+![Capture](https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/41812aa2-a5df-4843-b36e-c7793f1fcd43)
 
 ## Evidence
 
-I have evidence, but I can't upload it currently due to poor internet speed and large file size.
+[Link to Evidence](https://drive.google.com/file/d/1OYIF6oTWPNmx9-2oTB2REShoPkCYrpC6/view?usp=sharing)
 
 ## Reflective Schedule
 | Week                        |  Goal                                                                                     |
