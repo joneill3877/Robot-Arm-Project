@@ -96,6 +96,19 @@ Run the menu item's corresponding function
 ## CAD
 [Link to onshape](https://cvilleschools.onshape.com/documents/e30ffb94e8ba368b6e045edf/w/2e96059f558c7828030257d8/e/bc3dcf792d39e192dca5e8ad)
 
+<img width="923" alt="Screenshot 2024-06-03 at 9 28 00 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/b2591f83-b173-4069-9a73-09aa9653d4e2">
+
+<img width="244" alt="Screenshot 2024-06-03 at 9 27 47 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/f07e10e0-3ee5-4aa5-8c6c-97f37dc6f521">
+
+<img width="329" alt="Screenshot 2024-06-03 at 9 27 34 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/fa212961-fc30-4d58-bc93-473009717014">
+
+<img width="296" alt="Screenshot 2024-06-03 at 9 27 22 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/c9752fd9-9aec-4179-bd76-e4c4d1a4b836">
+
+<img width="787" alt="Screenshot 2024-06-03 at 9 27 07 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/56ea9365-8c97-4d75-ac76-6409307a08f2">
+
+<img width="729" alt="Screenshot 2024-06-03 at 9 26 49 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/65ec391e-f2be-41fa-937c-748bc19c2165">
+
+<img width="341" alt="Screenshot 2024-06-03 at 9 26 21 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/17a7a989-e7a1-4f95-852f-a130296283d0">
 ## Code
 
 ```python
@@ -515,19 +528,7 @@ while True:
 
 ## Evidence
 
-<img width="923" alt="Screenshot 2024-06-03 at 9 28 00 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/b2591f83-b173-4069-9a73-09aa9653d4e2">
 
-<img width="244" alt="Screenshot 2024-06-03 at 9 27 47 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/f07e10e0-3ee5-4aa5-8c6c-97f37dc6f521">
-
-<img width="329" alt="Screenshot 2024-06-03 at 9 27 34 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/fa212961-fc30-4d58-bc93-473009717014">
-
-<img width="296" alt="Screenshot 2024-06-03 at 9 27 22 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/c9752fd9-9aec-4179-bd76-e4c4d1a4b836">
-
-<img width="787" alt="Screenshot 2024-06-03 at 9 27 07 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/56ea9365-8c97-4d75-ac76-6409307a08f2">
-
-<img width="729" alt="Screenshot 2024-06-03 at 9 26 49 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/65ec391e-f2be-41fa-937c-748bc19c2165">
-
-<img width="341" alt="Screenshot 2024-06-03 at 9 26 21 AM" src="https://github.com/joneill3877/Robot-Arm-Project/assets/143545309/17a7a989-e7a1-4f95-852f-a130296283d0">
 
 ## Reflective Schedule
 | Week                        |  Goal                                                                                     |
