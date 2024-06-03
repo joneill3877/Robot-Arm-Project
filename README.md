@@ -527,7 +527,8 @@ while True:
 | Week 5 (April 29-May 3) |  Assembled the controller and coded.  |
 | Week 6 (May 6-10) |  Coded and assembled the project.  |
 | Week 7 (May 13-17) |  Finished code and printed.  |
-| Week 8 (May 20-24) |  Finished the documentation, printed, and assembled.  |
+| Week 8 (May 20-24) |  Finished, printed, and assembled the documentation.  |
 
 ## Reflection
 
+This project tested our combined engineering skills, and we had to learn numerous new skills to complete our goal. Despite minor setbacks in the structural integrity of some of our parts, we were mostly successful in accomplishing our goals. The general intention of our project was not too ambitious as to be unfeasible with our allotted time, but also not too easy that we weren't gaining any new knowledge. In addition, we effectively allocated tasks which ensured good teamwork and cooperation throughout the project. If we were to do this project again, we would focus more on the tight tolerances and structural integrity of our design which would prevent some of the pitfalls we would encounter throughout our journey. Even though our final project didn't operate as intended due to some limitations of the stepper motors we had access to, the code did function perfectly as intended and the final prints were mostly free of imperfections. We didn't perfectly match our intended schedule, but this is due to a small amount of short-sightedness and surprise scheduling conflicts. However, we did plan for this as we planned for extra time on our documentation to act as a buffer if needed. Overall, we enjoyed this project and class despite coming up short of our goals.
